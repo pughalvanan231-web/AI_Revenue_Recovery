@@ -1,0 +1,26 @@
+# Project Tasks (Execution Order)
+
+- [x] **Milestone 1: Scope & Setup**
+  - Lock narrow failure class: checkout payment degradation by bank/payment method.
+- [x] **Milestone 2: Schema & Data**
+  - Define the event schema.
+  - Generate labeled evaluation set (5,000+ synthetic events across merchants, banks, failure codes).
+- [x] **Milestone 3: Deterministic Policy Engine**
+  - Implement deterministic rules layer.
+  - Implement audit logging.
+- [x] **Milestone 4: Evaluation Baseline**
+  - Build baseline policies: no-action, blind retry, simple rule baseline.
+  - Build evaluation harness.
+- [x] **Milestone 5: Probabilistic Layer (Diagnosis)**
+  - Integrate an LLM (Mock or real) to read event and context.
+  - LLM outputs a `DiagnosisProposal` json object.
+- [x] **Milestone 6: Integration & Idempotency**
+  - Integrate test-mode actions.
+  - Enforce strict idempotency (at-most-once execution).
+  - Outcome reconciliation.
+- [x] **Milestone 7: Failure Injection**
+  - Inject concurrent webhooks to test DB locks.
+  - Inject crashed worker/stale reservation to test escalation fallback.
+- [x] **Milestone 8: 5-Minute Demo**
+  - E2E scenario run.
+  - Show the final demo.cs, dashboards, and evaluation logs for video.
